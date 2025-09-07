@@ -18,4 +18,37 @@ const loadCatagories = () => {
             showingCatagory(cat.categories)
         })
 }
+const loadCardApiByCetagoryId = (cetagoryID) => {
+    fetch(`https://openapi.programming-hero.com/api/category/${cetagoryID}`)
+        .then(res => res.json())
+        .then(cardsDetails => showcardByCategory(cardsDetails.
+            plants))
+}
+
+//  -------- cal add to card button ---------
+const addCartBtn = ()=>{
+    console.log(" add to card btn clicked");
+    console.log(cardsContainers)
+}
+// ........ display or showing data into UI ....
+const showingCatagory = (categories) => {
+    categories.forEach(category => {
+        // console.log()
+        categorContainer.innerHTML += `
+            <li id="${category.id}" class="hover:bg-green-500 py-2 px-3 rounded-md btn-category cursor-pointer">${category.category_name}</li>
+  `
+    });
+    categorContainer.addEventListener("click", (e) => {
+        const caterogyList = document.querySelectorAll('li');
+        caterogyList.forEach(li => {
+            li.classList.remove("bg-green-500")
+        })
+        if (e.target.localName === 'li') {
+            e.target.classList.add("bg-green-500")
+            loadCardApiByCetagoryId(e.target.id)
+        }
+    })
+
+}
+
 
