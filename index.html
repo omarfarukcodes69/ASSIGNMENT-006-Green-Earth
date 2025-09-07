@@ -80,7 +80,103 @@
             <!-- <div class="w-full"><img src="./assets/hero-leaf2.png" alt=""></div> -->
         </section>
     </header>
+    <main class="">
+        <!-- -------- layout design ------ -->
+        <section class=" max-w-[1440px] mx-auto my-[100px] grid grid-cols-1 md:grid-cols-12 gap-5">
 
+            <!-- --------- cetagory sections -------- -->
+            <div class="w-full p-2 col-span-2 space-y-2">
+                <h1 class="text-xl font-bold ">Categories</h1>
+                <ul id="category-container" class=" space-y-2 ">
+                </ul>
+
+            </div>
+            <!-- ------- cars secrions  ----- -->
+            <div id="cards-container"
+                class="w-full md:col-span-8 grid md:grid-cols-3 justify-around items-center gap-5">
+
+
+            </div>
+
+            <!-- ------ add to card section ----- -->
+            <div class="w-full p-2 bg-white rounded  col-span-2 space-y-2">
+                <h1 class=" text-xl font-bold ">Your Card</h1>
+                <div class="add-container bg-[#F0FDF4] px-4 py-2 flex justify-between items-center rounded-md ">
+                    <div class="title space-y-2">
+                        <h1 class="text-xl font-bold">card name</h1>
+                        <p class="text-md text-gray-400 ">৳<span>1200</span></p>
+                    </div>
+                    <div  class=" cursor-pointer"><i class="fa-solid fa-xmark"></i></div>
+                </div>
+                <div class="flex  justify-between items-center py-2">
+                    <p>Total:</p>
+                    <p>৳<span>1200</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ------ about section -------- -->
+        <section class=" max-w-[1090px] mx-auto my-20 space-y-15">
+            <h1 class="text-3xl font-bold text-center space-y-5">About the Campaign</h1>
+            <div class="flex flex-col  md:flex-row justify-between items-center gap-10">
+                <img src="./assets/about.png" alt="" class="">
+                <div class="about space-y-5 text-gray-500 text-md ">
+                    <p>Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since
+                        our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore
+                        forests, create habitats for wildlife, and combat global warming.</p>
+                    <ul class="list-disc pl-10">
+                        <li>Restoration of natural habitats </li>
+                        <li>Improvement of air quality</li>
+                        <li> for local communities</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ----- our impact section -------  -->
+        <section class=" bg-[#CFF0DC] py-25 px-30 space-y-10">
+            <h1 class="text-3xl font-bold text-center ">Our Impact</h1>
+            <div class="imapct-cards flex flex-col md:flex-row justify-center items-center gap-5">
+                <div class="card py-7 px-25 bg-white space-y-1">
+                    <h1 class="text-2xl font-bold text-[#15803D]">500K+</h1>
+                    <p class=" text-gray-400 ">Trees Planted</p>
+                </div>
+                <div class="card py-7 px-25 bg-white space-y-1">
+                    <h1 class="text-2xl font-bold text-[#15803D]">500K+</h1>
+                    <p class=" text-gray-400 ">Trees Planted</p>
+                </div>
+                <div class="card py-7 px-25 bg-white space-y-1">
+                    <h1 class="text-2xl font-bold text-[#15803D]">500K+</h1>
+                    <p class=" text-gray-400 ">Trees Planted</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ------ feedback section ----- -->
+        <section class=" bg-[#166534] py-25 px-auto space-y-10">
+            <h1 class="text-3xl font-bold text-center text-white ">Plant a Tree Today</h1>
+            <div class="input-box w-100 mx-auto p-7 rounded-lg space-y-3 bg-[#15803D]">
+                <input type="text" placeholder="Your Name" class="input w-full" />
+                <input type="text" placeholder="Your Email Address" class="input w-full" />
+                <input type="text" class="input w-full" placeholder="Number of Tree" list="browsers" />
+                <datalist id="numbers">
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                </datalist>
+                <button
+                    class=" btn w-full bg-[#FACC15] hover:bg-[#f0fdf4] rounded-3xl py-3 px-6 text-md  text-[#15803D]">Donate
+                    Now</button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+        <footer class="bg-[#14532D] text-white py-4 text-center">
+        <p>© 2025 Green Earth. All Rights Reserved.</p>
+    </footer>
 
 
 
