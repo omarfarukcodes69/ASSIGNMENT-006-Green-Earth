@@ -50,5 +50,29 @@ const showingCatagory = (categories) => {
     })
 
 }
+const showcardByCategory = (plants) => {
+    cardsContainers.innerHTML = " ";
+    plants.forEach(plant => {
+        cardsContainers.innerHTML += `
+                            <div class="card w-full bg-white shadow-sm px-4 pt-4">
+                        <figure class="max-h-50 rounded-md">
+                            <img  src="${plant.image}"
+                                alt="${plant.name}" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">${plant.name}</h2>
+                            <p>${plant.description} </p>
+                            <div class=" text-lg flex items-center justify-between">
+                                <p class="text-center p-1 bg-[#DCFCE7] text-[#166534] rounded-3xl ">${plant.category}</p>
+                                <p class=" font-bold text-right">৳${plant.price}</p>
+                            </div>
+                            <button onclick="addCartBtn()" class="btn w-full py-6 bg-[#166534] text-white text-lg rounded-3xl">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+        `
+    })
+}
 
-
+loadCatagories()
+loadAllPlants()
